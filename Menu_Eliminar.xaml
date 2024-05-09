@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppUTN001.Menu_Eliminar"
+             BackgroundColor="#5a61bd">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Frame BackgroundColor="#9ca2ef" CornerRadius="10" Margin="0,10">
+                    <StackLayout>
+                        <Label Text="Eliminar Arma" FontSize="Large" HorizontalOptions="Center" Margin="0,10" TextColor="Black" />
+
+                        <Label Text="ID" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="ID" x:Name="idEntry" IsEnabled="True" />
+
+                        <Label Text="Nombre" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Nombre" x:Name="nombreEntry" TextColor="Black" />
+
+                        <Label Text="Descripción" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Descripción" x:Name="descripcionEntry" TextColor="Black" />
+
+                        <Label Text="Rareza" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Rareza" x:Name="rarezaEntry" TextColor="Black" />
+
+                        <Label Text="ATK" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="ATK" x:Name="atkEntry" TextColor="Black" />
+
+                        <Label Text="Crit. DMG" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Crit. DMG" x:Name="critDmgEntry" TextColor="Black" />
+
+                        <Label Text="Cantidad" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Cantidad" x:Name="cantidadEntry" TextColor="Black" />
+
+                        <Label Text="ID Tipo de Arma" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="ID Tipo de Arma" x:Name="tipoArmaIdEntry" TextColor="Black" />
+
+                        <Button Text="Buscar" Clicked="BuscarClicked" Margin="0,10,0,0" BackgroundColor="#5a61bd" TextColor="White" />
+                        <Button Text="Eliminar" Clicked="EliminarClicked" Margin="0,5" BackgroundColor="#5a61bd" TextColor="White" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

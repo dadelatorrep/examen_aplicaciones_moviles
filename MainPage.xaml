@@ -1,0 +1,65 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppUTN001.MainPage"
+             BackgroundColor="#5a61bd">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Frame BackgroundColor="#9ca2ef" CornerRadius="10" Margin="0,10">
+                    <StackLayout>
+                        <Image Source="./Icons/login.svg"
+                               WidthRequest="150"
+                               HeightRequest="150"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand" />
+
+                        <Label Text="Login"
+                               Style="{StaticResource Headline}"
+                               SemanticProperties.HeadingLevel="Level1"
+                               HorizontalOptions="Center"
+                               TextColor="Black" />
+
+                        <Entry Placeholder="Username"
+                               x:Name="txtUsername"
+                               ReturnType="Next"
+                               TextColor="Black" />
+
+                        <Entry Placeholder="Password"
+                               IsPassword="True"
+                               x:Name="txtPassword"
+                               ReturnType="Done"
+                               TextColor="Black" />
+
+                        <Button Text="Login"
+                                Clicked="OnLoginClicked"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="#5a61bd"
+                                TextColor="White" />
+
+                        <Label x:Name="lblMensaje"
+                               TextColor="Black" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Tarjeta de información -->
+                <Frame BackgroundColor="#9ca2ef" CornerRadius="10" Margin="0,10">
+                    <StackLayout Padding="20">
+                        <Label Text="Universidad Técnica del Norte"
+                               FontAttributes="Bold"
+                               TextColor="#FF0000"
+                               HorizontalOptions="Center" />
+                        <Label Text="Carrera de Software"
+                               FontAttributes="Bold"
+                               TextColor="#FFFFFF"
+                               HorizontalOptions="Center" />
+                        <Label Text="Daniel de la Torre"
+                               FontAttributes="Bold"
+                               TextColor="#000000"
+                               HorizontalOptions="Center" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

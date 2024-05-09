@@ -1,0 +1,47 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppUTN001.Menu"
+             BackgroundColor="#5a61bd">
+
+
+    <!-- Contenido de la página -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Tarjeta "MENU" -->
+        <Frame Grid.Row="0" Padding="10" Margin="10" HasShadow="True" BackgroundColor="#5a61bd" CornerRadius="10" BorderColor="#5a61bd">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Image Source="Icons/menu.svg" WidthRequest="50" HeightRequest="40" />
+                <Label Text="MENU" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="10,0" FontAttributes="Bold" TextColor="White" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Colección de tarjetas para el menú -->
+        <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding MenuOptions}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnMenuItemSelected">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="20"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="10,20,10,20" HasShadow="True" BackgroundColor="#9ca2ef" CornerRadius="10" BorderColor="#5a61bd">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnCardTapped" />
+                        </Frame.GestureRecognizers>
+                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Image Source="{Binding IconPath}" HorizontalOptions="Center" WidthRequest="100" HeightRequest="100" />
+                            <Label Text="{Binding Title}" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Description}" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>

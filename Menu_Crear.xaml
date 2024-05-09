@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="MauiAppUTN001.Menu_Crear"
+             mc:Ignorable="d"
+             BackgroundColor="#5a61bd">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Frame BackgroundColor="#9ca2ef" CornerRadius="10" Margin="0,10">
+                    <StackLayout>
+                        <Label Text="Crear Arma" FontSize="Large" HorizontalOptions="Center" Margin="0,10" TextColor="Black" />
+
+                        <Label Text="Nombre" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Nombre" x:Name="nombreEntry" TextColor="Black" />
+
+                        <Label Text="Descripción" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Descripción" x:Name="descripcionEntry" TextColor="Black" />
+
+                        <!-- Lógica para llenar el picker de rareza -->
+                        <Label Text="Rareza" FontAttributes="Bold" TextColor="Black" />
+                        <Picker x:Name="rarezaPicker" Title="Seleccionar Rareza" TextColor="Black" />
+
+                        <Label Text="ATK" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="ATK" x:Name="atkEntry" Keyboard="Numeric" TextColor="Black" />
+
+                        <Label Text="Crit. DMG" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Crit. DMG" x:Name="critDmgEntry" Keyboard="Numeric" TextColor="Black" />
+
+                        <Label Text="Cantidad" FontAttributes="Bold" TextColor="Black" />
+                        <Entry Placeholder="Cantidad" x:Name="cantidadEntry" Keyboard="Numeric" TextColor="Black" />
+
+                        <Label Text="Tipo de Arma" FontAttributes="Bold" TextColor="Black" />
+                        <Picker x:Name="tipoArmaPicker" Title="Seleccionar Tipo de Arma" TextColor="Black" />
+
+                        <Button Text="Guardar" Clicked="GuardarClicked" Margin="0,10,0,0" BackgroundColor="#5a61bd" TextColor="White" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
