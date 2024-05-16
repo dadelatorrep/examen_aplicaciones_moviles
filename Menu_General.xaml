@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppUTN001.Menu_General"
+             Title="Menu"
+             BackgroundColor="#5a61bd">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <!-- Tarjeta MENU -->
+        <Frame BackgroundColor="#5a61bd" CornerRadius="10" Padding="20" HasShadow="True">
+            <Label Text="MENU" 
+                   TextColor="White"
+                   FontSize="24"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="CenterAndExpand"/>
+        </Frame>
+
+        <!-- Contenedor para las dos tarjetas -->
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <!-- Tarjeta Tipos de Arma -->
+            <Frame BackgroundColor="#9ca2ef" CornerRadius="10" Padding="20" HasShadow="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTiposDeArmaTapped"/>
+                </Frame.GestureRecognizers>
+                <VerticalStackLayout>
+                    <Image Source="Resources/Images/swords_shield.png" 
+                           HeightRequest="100" 
+                           WidthRequest="100" 
+                           HorizontalOptions="Center" />
+                    <Label Text="Tipos de Arma" 
+                           TextColor="Black"
+                           FontSize="18"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="CenterAndExpand"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Tarjeta Arma -->
+            <Frame BackgroundColor="#9ca2ef" CornerRadius="10" Padding="20" HasShadow="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnArmaTapped"/>
+                </Frame.GestureRecognizers>
+                <VerticalStackLayout>
+                    <Image Source="Resources/Images/blacksmith.png" 
+                           HeightRequest="100" 
+                           WidthRequest="100" 
+                           HorizontalOptions="Center" />
+                    <Label Text="Arma" 
+                           TextColor="Black"
+                           FontSize="18"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="CenterAndExpand"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

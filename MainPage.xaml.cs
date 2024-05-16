@@ -28,7 +28,7 @@ namespace MauiAppUTN001
                 {
                     lblMensaje.Text = "Inicio de sesión exitoso";
                     await DisplayAlert("Éxito", "Inicio de sesión exitoso", "OK"); // Mensaje de confirmación
-                    await Navigation.PushAsync(new Menu());
+                    await Navigation.PushAsync(new Menu_General());
                     LimpiarCampos();
                 }
                 else

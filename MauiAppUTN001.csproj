@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Icons\blacksmith.png" />
 	  <None Remove="Icons\book.svg" />
 	  <None Remove="Icons\delete.svg" />
 	  <None Remove="Icons\edit.svg" />
@@ -64,6 +65,7 @@
 	  <None Remove="Icons\logout.svg" />
 	  <None Remove="Icons\menu.svg" />
 	  <None Remove="Icons\swords.svg" />
+	  <None Remove="Icons\swords_shield.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -75,16 +77,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Menu.xaml.cs">
-	    <DependentUpon>Menu.xaml</DependentUpon>
+	  <Compile Update="Menu_Arma_Crear.xaml.cs">
+	    <DependentUpon>Menu_Arma_Crear.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Menu_General.xaml.cs">
+	    <DependentUpon>Menu_General.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Arma_Menu.xaml.cs">
+	    <DependentUpon>Arma._Menuxaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Menu.xaml">
+	  <MauiXaml Update="Arma_Menu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Menu_Crear.xaml">
+	  <MauiXaml Update="Menu_General.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Menu_Arma_Crear.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Menu_Editar.xaml">
@@ -96,9 +107,25 @@
 	  <MauiXaml Update="Menu_Inventario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="TipoArma_Create.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TipoArma_Delete.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TipoArma_Menu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TipoArma_Read.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TipoArma_Update.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Icons\blacksmith.png" />
 	  <MauiImage Include="Icons\book.svg" />
 	  <MauiImage Include="Icons\delete.svg" />
 	  <MauiImage Include="Icons\edit.svg" />
@@ -106,6 +133,7 @@
 	  <MauiImage Include="Icons\logout.svg" />
 	  <MauiImage Include="Icons\menu.svg" />
 	  <MauiImage Include="Icons\swords.svg" />
+	  <MauiImage Include="Icons\swords_shield.png" />
 	</ItemGroup>
 
 </Project>
